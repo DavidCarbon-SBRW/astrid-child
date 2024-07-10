@@ -3,13 +3,10 @@
  * @package Astrid-Child
  */
 
-/**
- * Styles
- */
 function astrid_child_custom_styles($custom)
 {
     $custom = "";
-    
+
     //Menu style
     $sticky_menu = get_theme_mod("sticky_menu", "sticky");
     if ($sticky_menu == "static") {
@@ -20,23 +17,21 @@ function astrid_child_custom_styles($custom)
         $custom .= ".site-header {position: fixed;}";
     }
 
-    $menu_style = get_theme_mod('menu_style','inline');
-	if ($menu_style == 'centered') {
-		$custom .= ".site-header .container { display: block;}"."\n";
-		$custom .= ".site-branding { width: 100%; text-align: center;margin-bottom:15px;padding-top:15px;}"."\n";
-		$custom .= ".main-navigation { width: 100%;float: none; clear:both;}"."\n";
-		$custom .= ".main-navigation ul { float: none;text-align:center;}"."\n";
-		$custom .= ".main-navigation li { float: none; display: inline-block;}"."\n";
-		$custom .= ".main-navigation ul ul li { display: block; text-align: left;}"."\n";
-	}
+    $menu_style = get_theme_mod("menu_style", "inline");
+    if ($menu_style == "centered") {
+        $custom .= ".site-header .container { display: block;}";
+        $custom .= ".site-branding { width: 100%; text-align: center;margin-bottom:15px;padding-top:15px;}";
+        $custom .= ".main-navigation { width: 100%;float: none; clear:both;}";
+        $custom .= ".main-navigation ul { float: none;text-align:center;}";
+        $custom .= ".main-navigation li { float: none; display: inline-block;}";
+        $custom .= ".main-navigation ul ul li { display: block; text-align: left;}";
+    }
 
     //Footer background
     $footer_image = get_theme_mod("footer_background_img");
     if ($footer_image) {
         $custom .=
-            ".footer-wrapper { background:url(" .
-            esc_url($footer_image) .
-            ") no-repeat center;background-size:cover;}";
+            ".footer-wrapper { background:url(" . esc_url($footer_image) . ") no-repeat center;background-size:cover;}";
     }
 
     //Button sizes
@@ -131,8 +126,7 @@ function astrid_child_custom_styles($custom)
             " .site-content > .container { background-color:" .
             esc_attr($single_post_background) .
             " ;}";
-        $custom .=
-            ".postid-" . $post->ID . " .hentry { background-color:" . esc_attr($single_post_background) . " ;}";
+        $custom .= ".postid-" . $post->ID . " .hentry { background-color:" . esc_attr($single_post_background) . " ;}";
         $custom .=
             ".postid-" .
             $post->ID .
@@ -147,8 +141,7 @@ function astrid_child_custom_styles($custom)
             " .site-content > .container { background-color:" .
             esc_attr($single_post_background) .
             " ;}";
-        $custom .=
-            ".page-id-" . $post->ID . " .hentry { background-color:" . esc_attr($single_post_background) . " ;}";
+        $custom .= ".page-id-" . $post->ID . " .hentry { background-color:" . esc_attr($single_post_background) . " ;}";
         $custom .=
             ".page-id-" .
             $post->ID .
@@ -209,6 +202,6 @@ function astrid_child_custom_styles($custom)
         }
     }
 
-    wp_add_inline_style("astrid-child-style", $custom);
+    wp_add_inline_style("base-style", $custom);
 }
-add_action("wp_enqueue_scripts", "astrid_child_custom_styles");
+add_action("wp_enqueue_scripts", "astrid_child_custom_styles", 12);

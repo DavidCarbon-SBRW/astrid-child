@@ -183,158 +183,7 @@ function astrid_child_customizer( $wp_customize ) {
                'priority'       => 11,
             )
         )
-    );  
-
-    //___Colors___// 
-    $wp_customize->add_setting(
-        'ap_menu_items',
-        array(
-            'default'           => '#ffffff',
-            'sanitize_callback' => 'sanitize_hex_color',
-        )
     );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_menu_items',
-            array(
-                'label'         => __('Menu items', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    );
-    $wp_customize->add_setting(
-        'ap_submenu_items',
-        array(
-            'default'           => '#ffffff',
-            'sanitize_callback' => 'sanitize_hex_color',
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_submenu_items',
-            array(
-                'label'         => __('Submenu items', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    );
-    $wp_customize->add_setting(
-        'ap_submenu_bg',
-        array(
-            'default'           => '#1C1E21',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport'         => 'postMessage'
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_submenu_bg',
-            array(
-                'label'         => __('Submenu background', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    );
-    $wp_customize->add_setting(
-        'ap_header_overlay',
-        array(
-            'default'           => '#252E35',
-            'sanitize_callback' => 'sanitize_hex_color',
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_header_overlay',
-            array(
-                'label'         => __('Header overlay', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    );
-    $wp_customize->add_setting(
-        'ap_header_text',
-        array(
-            'default'           => '#ffffff',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport'         => 'postMessage'
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_header_text',
-            array(
-                'label'         => __('Header text', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    );
-    $wp_customize->add_setting(
-        'ap_footer_color',
-        array(
-            'default'           => '#a3aaaa',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport'         => 'postMessage'
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_footer_color',
-            array(
-                'label'         => __('Footer text', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    );
-    $wp_customize->add_setting(
-        'ap_footer_wt_color',
-        array(
-            'default'           => '#ffffff',
-            'sanitize_callback' => 'sanitize_hex_color',
-            'transport'         => 'postMessage'
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_footer_wt_color',
-            array(
-                'label'         => __('Footer widgets title', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    );
-
-    $wp_customize->add_setting(
-        'ap_row_overlay',
-        array(
-            'default'           => '#252E35',
-            'sanitize_callback' => 'sanitize_hex_color',
-        )
-    );
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control(
-            $wp_customize,
-            'ap_row_overlay',
-            array(
-                'label'         => __('Row overlay', 'astrid'),
-                'section'       => 'colors',
-                'priority'      => 10
-            )
-        )
-    ); 
 
     //___Single templates___//
     $wp_customize->add_section(
@@ -531,8 +380,11 @@ function astrid_child_customizer( $wp_customize ) {
             'priority'  => 21,
         )
     );
-
-
+    
+    //___Colors___//  
+    //TODO: Add drop down option to switch between different themes (Debug Only)
+    $wp_customize->remove_section('colors');    
+    
     //Maps API key
     $wp_customize->add_section(
         'astrid_child_maps',
@@ -562,7 +414,7 @@ function astrid_child_customizer( $wp_customize ) {
     $wp_customize->add_setting(
         'astrid_child_disable_api',
         array(
-            'default'           => '',
+            'default'           => '1',
             'sanitize_callback' => 'astrid_sanitize_checkbox',
         )       
     );
