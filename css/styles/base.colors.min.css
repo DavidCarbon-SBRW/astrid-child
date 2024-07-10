@@ -1,0 +1,285 @@
+/* open-sans-300 - latin_latin-ext */
+@font-face {
+    font-display: auto;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../fonts/open-sans-v40-latin_latin-ext-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-300italic - latin_latin-ext */
+@font-face {
+    font-display: auto;
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 300;
+    src: url("../../fonts/open-sans-v40-latin_latin-ext-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-600 - latin_latin-ext */
+@font-face {
+    font-display: auto;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../../fonts/open-sans-v40-latin_latin-ext-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-600italic - latin_latin-ext */
+@font-face {
+    font-display: auto;
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 600;
+    src: url("../../fonts/open-sans-v40-latin_latin-ext-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* josefin-sans-300 - latin_latin-ext */
+@font-face {
+    font-display: auto;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../../fonts/josefin-sans-v32-latin_latin-ext-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* josefin-sans-300italic - latin_latin-ext */
+@font-face {
+    font-display: auto;
+    font-family: "Josefin Sans";
+    font-style: italic;
+    font-weight: 300;
+    src: url("../../fonts/josefin-sans-v32-latin_latin-ext-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@media (prefers-color-scheme: light) {
+}
+/* Colors Used for Dark Mode
+ * #272727 -> #ffffff
+ * #858585 - Off White
+ * #303030 - Off Grey
+ * #f5f9f8 -> #1b1b1b
+ **/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --font-one: "Open Sans", sans-serif;
+        --font-two: "Josefin Sans", sans-serif;
+        --body-color: #656d6d;
+        --body-bg-color: #1b1b1b;
+        --heading-color: #ffffff;
+        --attribute-color: #f00;
+        --blockquote-color: #ebebeb;
+        /*--------------------------------------------------------------
+    	# Tables
+    	--------------------------------------------------------------*/
+        --table-color: #e0e0e0;
+        --tableheader-bg-color: #f7f7f7;
+        --tabledata-color: #dddddd;
+        /*--------------------------------------------------------------
+    	Forms
+    	--------------------------------------------------------------*/
+        --buttoninput-color: #f00;
+        --buttoninput-border-color: #f00;
+        --buttoninput-bg-color: transparent;
+        --buttoninput-hover-color: #333;
+        --buttoninput-hover-bg-color: #f00;
+        --buttoninput-focus-border-top-color: #333;
+        --buttoninput-focus-border-sides-color: #bbb;
+        --buttoninput-focus-border-bottom-color: #bbb;
+        --buttoninput-focus-box-shadow-inset-color: rgba(255, 255, 255, 0.5);
+        --buttoninput-focus-box-shadow-inset-two-color: rgba(0, 0, 0, 0.15);
+        --textarea-color: #666;
+        --textarea-border-color: #ebebeb;
+        --textarea-focus-color: #111;
+        --select-border-color: #f2f2f3;
+        /*--------------------------------------------------------------
+    	## Menus
+    	--------------------------------------------------------------*/
+        --main-navigation-attribute-color: #fff;
+        --main-navigation-list-style-before-border-top-color: #f00;
+        --main-navigation-list-style-after-border-bottom-color: #f00;
+        --main-navigation-list-style-bg-color: #1c1e21;
+        --main-navigation-attribute-hover-color: #f00;
+        --main-navigation-list-style-attribute-color: #fff;
+        --main-navigation-sub-list-style-attribute-color: #fff;
+        /* Mobile menu */
+        --buttonmenu-color: #fff;
+        --buttonmenu-before-color: #fff;
+        --main-navigation-mobile-bg-color: #202529;
+        --main-navigation-mobile-list-style-border-bottom-color: rgba(255, 255, 255, 0.05);
+        --main-navigation-mobile-list-style-bg-color: #171717;
+        --postcomment-attribute-color: #ffffff;
+        --postcomment-attribute-hover-color: #f00;
+        /*--------------------------------------------------------------
+    	# Accessibility
+    	--------------------------------------------------------------*/
+        --screen-reader-text-focus-bg-color: #f1f1f1;
+        --screen-reader-text-focus-box-shadow-color: rgba(0, 0, 0, 0.6);
+        --screen-reader-text-focus-color: #21759b;
+        /*--------------------------------------------------------------
+    	# Widgets
+    	--------------------------------------------------------------*/
+        --widget-area-bg-color: #1b1b1b;
+        --widget-area-border-color: #f2f2f3;
+        --widget-area-attribute-color: #656d6d;
+        --widget-social-bg-color: #eaab1c;
+        --widget-social-list-style-attribute-color: #fff;
+        /* Default widgets */
+        --tagcloud-attribute-border-color: #41474f;
+        /*--------------------------------------------------------------
+    	# Content
+    	--------------------------------------------------------------*/
+        /*--------------------------------------------------------------
+    	## Posts and pages
+    	--------------------------------------------------------------*/
+        --hentry-bg-color: #1b1b1b;
+        --hentry-border-color: #f2f2f3;
+        --entry-meta-border-top-color: #f2f2f3;
+        --entry-meta-border-bottom-color: #f2f2f3;
+        --entry-meta-border-attribute-color: #a0a8ab;
+        --entry-title-and-attribute-color: #ffffff;
+        --entry-title-and-attribute-hover-color: #f00;
+        /*--------------------------------------------------------------
+    	## Comments
+    	--------------------------------------------------------------*/
+        --comments-title-border-color: #f2f2f3;
+        --comments-title-bg-color: #fff;
+        --comment-body-border-left-color: #f2f2f3;
+        --comment-body-border-right-color: #f2f2f3;
+        --comment-body-border-left-bottom: #f2f2f3;
+        --comment-body-and-children-border-left-color: #f2f2f3;
+        --comment-reply-link-bg-color: #fff;
+        --comment-reply-link-attribute-color: #000;
+        --comment-reply-link-attribute-box-shadow-color: #505050;
+        --comment-metadata-attribute-color: #444;
+        --comment-respond-border-right-color: #f2f2f3;
+        /*--------------------------------------------------------------
+    	## Widgetised
+    	--------------------------------------------------------------*/
+        --row-overlay-bg-color: rgba(37, 46, 53, 0.8);
+        /* Block titles */
+        --widget-title-title-decoration-bg-color: rgba(92, 98, 101, 0.3);
+        --widget-title-atblock-bg-color: #d2d8da;
+        --service-title-attribute-color: #ffffff;
+        --service-title-attribute-hover-color: #f00;
+        /* Skills */
+        --progress-bar-bg-color: #e8ecee;
+        --progress-animate-bg-color: #f00;
+        --fact-fa-color: #f00;
+        --fact-and-number-border-top: rgba(92, 98, 101, 0.3);
+        --fact-and-number-border-bottom: rgba(92, 98, 101, 0.3);
+        --employee-title-bg-color: #202529;
+        --employee-title-attribute-color: #fff;
+        --employee-title-attribute-hover-color: #f00;
+        --project-thumb-before-bg-color: rgba(37, 46, 53, 0.8);
+        --project-thumb-attribute-color: #fff;
+        --project-thumb-attribute-before-bg-color: rgba(255, 255, 255, 0.2);
+        --project-thumb-attribute-after-bg-color: rgba(255, 255, 255, 0.2);
+        --testimonial-content-bg-color: #fff;
+        --testimonial-content-border-color: #f2f2f3;
+        --testimonial-svg-fill-color: #fff;
+        --testimonial-svg-stroke-color: #f2f2f3;
+        --testimonial-title-attribute-color: #ffffff;
+        --testimonial-title-attribute-hover-color: #f00;
+        /*--------------------------------------------------------------
+    	## Structure
+    	--------------------------------------------------------------*/
+        --site-title-attribute-color: #fff;
+        --site-description-attribute-color: #bdbdbd;
+        --site-content-bg-color: #1b1b1b;
+        --site-content-border-left-color: #f2f2f3;
+        --site-content-border-right-color: #f2f2f3;
+        --site-content-border-bottom-color: #f2f2f3;
+        --body-page-template-page-widgetized-builder-bg-color: #fff;
+        --page-header-title-fa-color: #f00;
+        /*--------------------------------------------------------------
+    	## Header
+    	--------------------------------------------------------------*/
+        --site-header-bg-color: #202529;
+        --site-header-border-bottom-color: rgba(255, 255, 255, 0.1);
+        --site-header-has-video-header-bg-color: transparent;
+        --site-header-scrolled-bg-color: rgba(32, 37, 41, 0.9);
+        --site-header-scrolled-border-bottom-color: transparent;
+        --header-image-after-bg-color: rgba(37, 46, 53, 0.9);
+        --header-text-color: #fff;
+        --header-subtext-color: #fff;
+        --header-subtext-border-bottom-color: rgba(255, 255, 255, 0.1);
+        /*--------------------------------------------------------------
+    	## Footer
+    	--------------------------------------------------------------*/
+        --footer-info-bg-color: rgba(32, 37, 41, 1);
+        --footer-widget-border-bottom-color: rgba(255, 255, 255, 0.08);
+        --site-footer-attribute-color: #a3aaaa;
+        --site-footer-attribute-hover-color: #f00;
+        --footer-widgets-title-color: #fff;
+        /* Footer branding */
+        --footer-info-border-bottom-color: rgba(255, 255, 255, 0.08);
+        /* Footer contact */
+        --footer-contact-border-left-color: rgba(255, 255, 255, 0.08);
+        --footer-contact-block-span-border-top-color: rgba(255, 255, 255, 0.08);
+        /*--------------------------------------------------------------
+    	## Preloader
+    	--------------------------------------------------------------*/
+        --preloader-bg-color: #fff;
+        --preloader-inner-list-style-bg-color: #f00;
+        /*--------------------------------------------------------------
+    	## Woocommerce
+    	--------------------------------------------------------------*/
+        --woocommerce-content-area-border-top-color: #f2f2f3;
+        --woocommerce-star-rating-color: #f00;
+        --woocommerce-cart-border-color: #f00;
+        --woocommerce-cart-button-color: #f00;
+        --woocommerce-cart-bg-color: transparent;
+        --woocommerce-message-bg-color: #f00;
+        --woocommerce-message-before-color: #f00;
+        --woocommerce-cart-button-bg-hover-color: #f00;
+        --woocommerce-cart-button-hover-color: #333;
+        --woocommerce-list-syle-products-price-color: #ffffff;
+        --woocommerce-span-onsale-bg-color: #f00;
+        --woocommerce-breadcrumb-border-color: #f2f2f3;
+        --woocommerce-navigation-list-syle-span-current-bg-color: #f9f9f9;
+        --woocommerce-navigation-list-syle-border-color: #f2f2f3;
+        --woocommerce-quantity-border-color: #f2f2f3;
+        --woocommerce-div-product-price-color: #ffffff;
+        --woocommerce-div-product-list-style-tabs-border-before-color: #f2f2f3;
+        --woocommerce-div-product-list-style-tabs-border-color: #f7f7f7;
+        --select2-container-choice-border-color: #ebebeb;
+        --woocommerce-checkout-payment-bg-color: transparent;
+        --woocommerce-div-product-span-price-color: #ffffff;
+        /*--------------------------------------------------------------
+        ## Responsive
+        --------------------------------------------------------------*/
+        --responsive-site-header-video-bg-color: #202529;
+        /*--------------------------------------------------------------
+        ## Addons
+        --------------------------------------------------------------*/
+        --toggle-map-bg-color: rgba(255, 255, 255, 0.1);
+        --toggle-map-bg-border-color: rgba(255, 255, 255, 0.2);
+        --map-toggled-bg-color: rgba(0, 0, 0, 0.5);
+        --t-event-even-border-left-color: rgba(0, 0, 0, 0.1);
+        --t-event-even-border-bottom-color: rgba(0, 0, 0, 0.1);
+        --t-event-odd-border-left-color: rgba(0, 0, 0, 0.1);
+        --t-event-odd-border-bottom-color: rgba(0, 0, 0, 0.1);
+        --event-deco-border-color: rgba(0, 0, 0, 0.1);
+        --event-deco-bg-color: #fff;
+        --event-date-deco-bg-color: rgba(0, 0, 0, 0.1);
+        --event-date-border-color: rgba(0, 0, 0, 0.1);
+        --plan-features-bg-color: #fff;
+        --plan-features-border-color: rgba(0, 0, 0, 0.06);
+        --plan-header-bg-color: #202529;
+        --plan-title-color: #fff;
+        --plan-header-bg-after-color: rgba(32, 37, 41, 0.8);
+        --table-feature-border-bottom-color: rgba(0, 0, 0, 0.06);
+        --table-feature-border-top-first-of-type-color: rgba(0, 0, 0, 0.06);
+        --plan-header-paragraph-color: #fff;
+        --991px-min-width-astrid-contact-map-bg-color: rgba(255, 255, 255, 0.1);
+        --991px-min-width-astrid-contact-map-border-color: rgba(255, 255, 255, 0.2);
+        --991px-min-width-astrid-contact-map-color: #fff;
+        --991px-min-width-astrid-contact-map-focus-color: #fff;
+        --991px-min-width-astrid-contact-map-input-placeholder-color: #fff;
+        --991px-min-width-astrid-contact-map-placeholder-color: #fff;
+        --991px-min-width-toggle-map-color: #fff;
+        --991px-max-width-border-left-color: rgba(0, 0, 0, 0.1);
+        --991px-max-width-border-bottom-color: rgba(0, 0, 0, 0.1);
+        --owl-controls-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        --owl-theme-div-color: #fff;
+        --owl-theme-div-bg-color: #869791;
+        --owl-theme-span-bg-color: transparent;
+        --owl-theme-span-border-color: #333;
+        --owl-theme-active-span-color: #fff;
+    }
+}
